@@ -112,7 +112,7 @@ end
 
 namespace :externalsources do
 
-  unless File.exists?("externalsources") && File.directory?("externalsources")
+  unless File.exist?("externalsources") && File.directory?("externalsources")
     Dir.mkdir("externalsources")
   end
 
@@ -376,7 +376,7 @@ task :body_and_nav_html_only do
   if @config_data['preview'].class == Array && @config_data['preview'].length > 0
     puts "THIS IS A PREVIEW VERSION, AND IT'S MISSING IMPORTANT STUFF. Do not deploy the site in this state; this is for local viewing only. To build a real version of the site, delete the `preview:` key from _config.yml."
   end
-  
+
   Dir.chdir("#{SOURCE_DIR}/_layouts") do
     FileUtils.mv("default.html", "body_only.html")
     FileUtils.mv("real_default.html", "default.html")
