@@ -34,7 +34,7 @@ defaultnav:
 #    subdirectory: documentation                    # A subdirectory within the remote repository that contains the documentation files that we'll build and mount at the specified url.
 externalsources:
   /mcollective:
-    repo: git://github.com/puppetlabs/marionette-collective.git
+    repo: git@github.com:choria-legacy/marionette-collective.git
     commit: origin/2.12.x
     subdirectory: website
 
