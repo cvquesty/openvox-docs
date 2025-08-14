@@ -3,7 +3,7 @@ gemspec :name => 'puppet_docs'
 
 gem 'versionomy', '~> 0.5.0'
 gem 'rake', '~> 13.0', '>= 13.0.1'
-gem 'rack', '~> 2.2', '>= 2.2.3'
+gem 'rack', '>= 2.2.14'
 gem 'git', '~> 1.8'
 gem 'json', '~> 2.5'
 
@@ -22,7 +22,7 @@ group(:generate_references) do
   gem 'pandoc-ruby'
   gem 'puppet-strings'
   gem 'puppet', '>= 7', '< 9'
-  gem 'nokogiri', '>= 1.12.5'
+  gem 'nokogiri', '>= 1.18.9'
   gem 'pragmatic_segmenter', '~> 0.3'
   gem 'punkt-segmenter', '~> 0.9'
 end
