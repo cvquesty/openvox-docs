@@ -259,6 +259,9 @@ var _ = _self.Prism = {
 
 		if (rest) {
 			for (var token in rest) {
+				if (token === '__proto__' || token === 'constructor' || token === 'prototype') {
+					continue;
+				}
 				grammar[token] = rest[token];
 			}
 
